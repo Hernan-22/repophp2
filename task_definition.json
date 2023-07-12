@@ -1,0 +1,65 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:369210944582:task-definition/hernan-repository:1",
+    "containerDefinitions": [
+        {
+            "name": "hernan-repository",
+            "image": "369210944582.dkr.ecr.us-east-1.amazonaws.com/hernan-repository",
+            "cpu": 1024,
+            "memory": 1024,
+            "portMappings": [
+                {
+                    "name": "hernan-repository-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "resourceRequirements": [
+                {
+                    "value": "1",
+                    "type": "GPU"
+                }
+            ]
+        }
+    ],
+    "family": "hernan-repository",
+    "executionRoleArn": "arn:aws:iam::369210944582:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "1024",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-07-12T00:28:49.658Z",
+    "registeredBy": "arn:aws:iam::369210944582:root",
+    "tags": []
+}
