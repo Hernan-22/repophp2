@@ -1,14 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:369210944582:task-definition/hernan-repository:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:369210944582:task-definition/tarea2:1",
     "containerDefinitions": [
         {
-            "name": "hernan-repository",
-            "image": "369210944582.dkr.ecr.us-east-1.amazonaws.com/hernan-repository",
-            "cpu": 1024,
-            "memory": 1024,
+            "name": "tarea2",
+            "image": "369210944582.dkr.ecr.us-east-1.amazonaws.com/tarea2",
+            "cpu": 0,
             "portMappings": [
                 {
-                    "name": "hernan-repository-80-tcp",
+                    "name": "tarea2-80-tcp",
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
@@ -20,18 +19,13 @@
             "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
-            "resourceRequirements": [
-                {
-                    "value": "1",
-                    "type": "GPU"
-                }
-            ]
+            "ulimits": []
         }
     ],
-    "family": "hernan-repository",
+    "family": "tarea2",
+    "taskRoleArn": "arn:aws:iam::369210944582:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::369210944582:role/ecsTaskExecutionRole",
-    "networkMode": "bridge",
+    "networkMode": "awsvpc",
     "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
@@ -40,26 +34,33 @@
             "name": "com.amazonaws.ecs.capability.ecr-auth"
         },
         {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
             "name": "ecs.capability.execution-role-ecr-pull"
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
         }
     ],
     "placementConstraints": [],
     "compatibilities": [
-        "EC2"
+        "EC2",
+        "FARGATE"
     ],
     "requiresCompatibilities": [
-        "EC2"
+        "FARGATE"
     ],
-    "cpu": "1024",
+    "cpu": "512",
     "memory": "1024",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-07-12T00:28:49.658Z",
+    "registeredAt": "2023-07-12T20:08:19.088Z",
     "registeredBy": "arn:aws:iam::369210944582:root",
     "tags": []
 }
