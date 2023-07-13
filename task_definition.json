@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:369210944582:task-definition/tarea2:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:369210944582:task-definition/ba16034:1",
     "containerDefinitions": [
         {
-            "name": "tarea2",
-            "image": "369210944582.dkr.ecr.us-east-1.amazonaws.com/tarea2",
+            "name": "ba16034",
+            "image": "369210944582.dkr.ecr.us-east-2.amazonaws.com/ba16034",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "tarea2-80-tcp",
+                    "name": "ba16034-80-tcp",
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
@@ -22,7 +22,7 @@
             "ulimits": []
         }
     ],
-    "family": "tarea2",
+    "family": "ba16034",
     "taskRoleArn": "arn:aws:iam::369210944582:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::369210944582:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
@@ -60,7 +60,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-07-12T20:08:19.088Z",
+    "registeredAt": "2023-07-13T03:08:54.465Z",
     "registeredBy": "arn:aws:iam::369210944582:root",
     "tags": []
 }
